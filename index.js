@@ -7,6 +7,7 @@ module.exports = {
 , falsy  : isFalsy
 , arr    : isArray
 , null   : isNull
+, def    : isDef
 , in     : isIn
 }
 
@@ -40,6 +41,10 @@ function isArray(d) {
 
 function isNull(d) {
   return d === null
+}
+
+function isDef(d) {
+  return typeof d !== 'undefined'
 }
 
 function isIn(set) {

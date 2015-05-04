@@ -49,6 +49,13 @@ describe('is', function() {
     expect(is.null(null)).to.be.equal(true)
   })    
 
+  it('should check if defined', function(){
+    var o = { a: false }
+    expect(is.def(o)).to.be.equal(true)
+    expect(is.def(o.a)).to.be.equal(true)
+    expect(is.def(o.b)).to.be.equal(false)
+  })    
+
   it('should check if in something', function(){
     expect(is.in(['a','b'])('b')).to.be.ok
     expect(is.in(['a','b'])('c')).to.not.be.ok
