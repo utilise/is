@@ -61,6 +61,8 @@ describe('is', function() {
     expect(is.in(['a','b'])('c')).to.not.be.ok
     expect(is.in('ab')('b')).to.be.ok
     expect(is.in('ab')('c')).to.not.be.ok
+    expect(is.in({'a':'b'})('a')).to.be.ok
+    expect(is.in({'a':'b'})('c')).to.not.be.ok
   })  
 
 })
