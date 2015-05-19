@@ -1,14 +1,19 @@
-module.exports = { 
-  fn     : isFunction
-, str    : isString
-, num    : isNumber
-, obj    : isObject
-, truthy : isTruthy
-, falsy  : isFalsy
-, arr    : isArray
-, null   : isNull
-, def    : isDef
-, in     : isIn
+module.exports = is
+is.fn     = isFunction
+is.str    = isString
+is.num    = isNumber
+is.obj    = isObject
+is.truthy = isTruthy
+is.falsy  = isFalsy
+is.arr    = isArray
+is.null   = isNull
+is.def    = isDef
+is.in     = isIn
+
+function is(v){
+  return function(d){
+    return d == v
+  }
 }
 
 function isFunction(d) {

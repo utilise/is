@@ -2,6 +2,11 @@ var expect = require('chai').expect
   , is = require('./')
 
 describe('is', function() {
+  it('should check if is same', function(){
+    expect(is('a')('a')).to.be.equal(true)
+    expect(is('a')('b')).to.be.equal(false)
+  })
+
   it('should check function type', function(){
     expect(is.fn(Function)).to.be.equal(true)
     expect(is.fn('function(){})')).to.be.equal(false)
