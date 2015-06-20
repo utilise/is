@@ -70,4 +70,11 @@ describe('is', function() {
     expect(is.in({'a':'b'})('c')).to.not.be.ok
   })  
 
+  it('should check if boolean', function(){
+    expect(is.bol(true)).to.be.equal(true)
+    expect(is.bol(false)).to.be.equal(true)
+    expect(is.bol(0)).to.be.equal(false)
+    expect(is.bol('')).to.be.equal(false)
+  })    
+
 })

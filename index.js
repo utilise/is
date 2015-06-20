@@ -3,6 +3,7 @@ is.fn     = isFunction
 is.str    = isString
 is.num    = isNumber
 is.obj    = isObject
+is.bol    = isBoolean
 is.truthy = isTruthy
 is.falsy  = isFalsy
 is.arr    = isArray
@@ -18,6 +19,10 @@ function is(v){
 
 function isFunction(d) {
   return typeof d == 'function'
+}
+
+function isBoolean(d) {
+  return typeof d == 'boolean'
 }
 
 function isString(d) {
