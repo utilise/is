@@ -28,6 +28,12 @@ describe('is', function() {
     expect(is.obj('')).to.be.equal(false)
   })
 
+  it('should check plain object type', function(){
+    expect(is.poj({})).to.be.equal(true)
+    expect(is.poj([])).to.be.equal(false)
+    expect(is.poj('')).to.be.equal(false)
+  })
+
   it('should check truthy', function(){
     expect(is.truthy(true)).to.be.equal(true)
     expect(is.truthy({})).to.be.equal(true)

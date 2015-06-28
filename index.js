@@ -3,6 +3,7 @@ is.fn     = isFunction
 is.str    = isString
 is.num    = isNumber
 is.obj    = isObject
+is.poj    = isPlainOject
 is.bol    = isBoolean
 is.truthy = isTruthy
 is.falsy  = isFalsy
@@ -35,6 +36,11 @@ function isNumber(d) {
 
 function isObject(d) {
   return typeof d == 'object'
+}
+
+function isPlainOject(d) {
+  return typeof d == 'object' 
+      && !(d instanceof Array)
 }
 
 function isTruthy(d) {
