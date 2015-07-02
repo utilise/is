@@ -3,7 +3,7 @@ is.fn     = isFunction
 is.str    = isString
 is.num    = isNumber
 is.obj    = isObject
-is.poj    = isPlainOject
+is.lit    = isLiteral
 is.bol    = isBoolean
 is.truthy = isTruthy
 is.falsy  = isFalsy
@@ -38,7 +38,7 @@ function isObject(d) {
   return typeof d == 'object'
 }
 
-function isPlainOject(d) {
+function isLiteral(d) {
   return typeof d == 'object' 
       && !(d instanceof Array)
 }

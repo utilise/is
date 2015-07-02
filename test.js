@@ -29,9 +29,9 @@ describe('is', function() {
   })
 
   it('should check plain object type', function(){
-    expect(is.poj({})).to.be.equal(true)
-    expect(is.poj([])).to.be.equal(false)
-    expect(is.poj('')).to.be.equal(false)
+    expect(is.lit({})).to.be.equal(true)
+    expect(is.lit([])).to.be.equal(false)
+    expect(is.lit('')).to.be.equal(false)
   })
 
   it('should check truthy', function(){
