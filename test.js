@@ -74,6 +74,7 @@ describe('is', function() {
     expect(is.in('ab')('c')).to.not.be.ok
     expect(is.in({'a':'b'})('a')).to.be.ok
     expect(is.in({'a':'b'})('c')).to.not.be.ok
+    expect(is.in(null)('c')).to.not.be.ok
   })  
 
   it('should check if boolean', function(){
