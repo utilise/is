@@ -84,4 +84,11 @@ describe('is', function() {
     expect(is.bol('')).to.be.equal(false)
   })    
 
+  it('should check if promise', function(){
+    expect(is.promise(true)).to.be.equal(false)
+    expect(is.promise({})).to.be.equal(false)
+    expect(is.promise()).to.be.equal(false)
+    expect(is.promise(new Promise(String))).to.be.equal(true)
+  })    
+
 })
