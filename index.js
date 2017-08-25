@@ -12,6 +12,7 @@ is.null    = isNull
 is.def     = isDef
 is.in      = isIn
 is.promise = isPromise
+is.stream  = isStream
 
 function is(v){
   return function(d){
@@ -67,6 +68,12 @@ function isDef(d) {
 function isPromise(d) {
   return d instanceof Promise
 }
+
+function isStream(d) {
+  return thing.unsubscribe
+}
+
+is.stream = thing => thing.unsubscribe
 
 function isIn(set) {
   return function(d){
