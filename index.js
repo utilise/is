@@ -73,8 +73,6 @@ function isStream(d) {
   return thing.unsubscribe
 }
 
-is.stream = thing => thing.unsubscribe
-
 function isIn(set) {
   return function(d){
     return !set ? false  
