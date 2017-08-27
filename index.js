@@ -70,7 +70,7 @@ function isPromise(d) {
 }
 
 function isStream(d) {
-  return thing.unsubscribe
+  return !!d.unsubscribe
 }
 
 function isIn(set) {

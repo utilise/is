@@ -91,4 +91,9 @@ describe('is', function() {
     expect(is.promise(new Promise(String))).to.be.equal(true)
   })    
 
+  it('should check if stream', function(){
+    expect(is.stream({ unsubscribe: true })).to.be.equal(true)
+    expect(is.stream({})).to.be.equal(false)
+  })    
+
 })
